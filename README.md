@@ -42,6 +42,14 @@ Para executar o script de confirmação de consultas, utilize o seguinte comando
 python main.py
 ```
 
+## Contribuição
+
+Ao instalar novas dependências, lembre-se de atualizar o arquivo `requirements.txt` utilizando:
+
+```bash
+pip freeze > requirements.txt
+```
+
 ## Licença
 
 Este projeto está licenciado sob a Licença Apache 2.0. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
