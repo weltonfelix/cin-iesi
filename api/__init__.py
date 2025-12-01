@@ -1,6 +1,7 @@
 import requests
 from .session import Session
 
+ALL_CALENDARS_ID=0
 
 class API:
     """
@@ -70,7 +71,7 @@ class API:
             response = requests.get(
                 f"{self.base_url}/schedule/{date}",
                 headers={"Authorization": f"Bearer {self.session.token}"},
-                params={"status": status_id} if status_id else None,
+                params={"status": status_id, "idCalendar": ALL_CALENDARS_ID},
             )
             return response.json().get("data", [])
         except requests.RequestException:
